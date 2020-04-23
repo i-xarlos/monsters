@@ -11,11 +11,11 @@
     transition: transform 0.25s ease-out;
 }
 
-h3 {
+.card-container h3 {
     font-size: 20px;
 }
 
-p {
+.card-container p {
     font-size: 15px;
 }
 
