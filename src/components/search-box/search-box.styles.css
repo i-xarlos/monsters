@@ -13,7 +13,8 @@
 }
 
 .search-box:focus {
-    border-color: orange;
-    background-color: orange;
+
+    border:solid 2px orange;
+    background-color: #ff4a04;
     color: rgb(2,0,35);
 }
