@@ -27,14 +27,15 @@ class App extends Component {
 
 		return (
 			<div className="App">
+				<h1>Monsters</h1>
 				<SearchBox onChange={this.handleInputChange} />
-				<header className="App-header">
+				<div className="App-content">
 					{!search.length < 1 ? (
 						<CardList users={search} />
 					) : (
 						<h2>Don't have coincidences</h2>
 					)}
-				</header>
+				</div>
 			</div>
 		);
 	}

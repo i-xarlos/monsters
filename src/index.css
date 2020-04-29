@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1 {
+ font-family: 'Leckerli One', cursive;
+ color: #ff4a04;
+ font-size: 6rem;
+}
