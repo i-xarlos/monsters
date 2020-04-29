@@ -1,0 +1,10 @@
+.search-box {
+    margin: 0 auto;
+    width: 80vw;
+    padding: 20px;
+    font-size: 3rem;
+    background-color: #282c34;
+    color: white;
+    -webkit-appearance: none;
+    border-radius: 10rem;
+}
