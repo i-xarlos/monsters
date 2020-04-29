@@ -20,3 +20,12 @@ padding: 15px 0 20px;
     background-color: #ff4a04;
     color: rgb(2,0,35);
 }
+
+
+@media only screen and (max-width:620px){
+    .search-box:focus {
+        font-size: 2rem;
+        padding: 1rem 0 1rem 1rem;
+        width: 80vw;
+    }
+}

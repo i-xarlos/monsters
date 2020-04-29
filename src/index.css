@@ -23,3 +23,10 @@ h1 {
 textarea:focus, input:focus{
     outline: none;
 }
+
+
+@media only screen and (max-width:620px){
+    h1 {
+        font-size: 3rem;
+     }
+}

@@ -2,10 +2,10 @@ import React from 'react';
 import './card-list.style.css';
 import Card from '../card/card.component';
 
-export function CardList({ users }) {
+export function CardList({ search }) {
 	return (
 		<div className="card-list">
-			{users.map((item, key) => {
+			{search.map((item, key) => {
 				return (
 					<Card
 						key={key}

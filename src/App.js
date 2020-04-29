@@ -24,20 +24,23 @@ class App extends Component {
 		let search = users.filter((item) =>
 			item.name.toLowerCase().includes(searchField),
 		);
+		let result;
+		if (users.length === 0) {
+			result = <h2>Loading...</h2>;
+		} else {
+			result =
+				search.length > 0 ? (
+					<CardList search={search} />
+				) : (
+					<h2>Don't have coincidences</h2>
+				);
+		}
 
 		return (
 			<div className="App">
 				<h1>Monsters</h1>
 				<SearchBox onChange={this.handleInputChange} />
-				<div className="App-content">
-					<CardList users={search} />
-
-					{search.length < 1 && searchField ? (
-						<h2>Don't have coincidences</h2>
-					) : (
-						<h2>Loading...</h2>
-					)}
-				</div>
+				<div className="App-content">{result}</div>
 			</div>
 		);
 	}
