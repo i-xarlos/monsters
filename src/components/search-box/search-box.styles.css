@@ -1,8 +1,8 @@
 .search-box {
     margin: 0 auto;
-    width: 80vw;
-    padding: 2rem 0 2.5rem 3rem;
-    font-size: 5rem;
+    font-size:calc(1rem + 2vmin);
+text-align: center;
+padding: 15px 0 20px;
     background-color: rgb(2,0,35);
     color: white;
     -webkit-appearance: none;
@@ -13,7 +13,9 @@
 }
 
 .search-box:focus {
-
+ width: 40vw;
+ padding: 1.5rem 0 2rem 2rem;
+    font-size: 4rem;
     border:solid 2px orange;
     background-color: #ff4a04;
     color: rgb(2,0,35);
