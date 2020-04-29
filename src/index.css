@@ -17,3 +17,8 @@ h1 {
  color: #ff4a04;
  font-size: 6rem;
 }
+
+
+textarea:focus, input:focus{
+    outline: none;
+}
