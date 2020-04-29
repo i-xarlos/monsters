@@ -24,7 +24,9 @@ class App extends Component {
 		let search = users.filter((item) =>
 			item.name.toLowerCase().includes(searchField),
 		);
+
 		let result;
+
 		if (users.length === 0) {
 			result = <h2>Loading...</h2>;
 		} else {
