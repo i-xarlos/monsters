@@ -1,7 +1,6 @@
 .App {
   text-align: center;
   background: rgb(2,0,36);
-  background-color: red;
   display: flow-root;
   min-height: 100vh;
 }
