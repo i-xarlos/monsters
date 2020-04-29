@@ -29,4 +29,9 @@ padding: 15px 0 20px;
         width: 80vw;
         color: white;
     }
+
+    ::placeholder{
+        color: white;
+        opacity: .5;
+    }
 }
