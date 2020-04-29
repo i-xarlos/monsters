@@ -2,9 +2,16 @@
     margin: 0 auto;
     width: 80vw;
     padding: 20px;
-    font-size: 3rem;
+    font-size: 5rem;
     background-color: #282c34;
     color: white;
     -webkit-appearance: none;
     border-radius: 10rem;
+    margin-top: 3rem;
+    border: 1px solid #535353;
+    transition: ease-in 1s all;
+}
+
+.search-box:focus {
+    border-color: green;
 }
