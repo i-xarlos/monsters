@@ -21,10 +21,9 @@ export function Card({
 				alt={name}
 				src={`https://robohash.org/${id}?size=200x200`}
 			/>
-			<h3>{name}</h3>
-			<p>{email}</p>
-			<p>{username}</p>
+			<h2>{name}</h2>
 			{children}
+			<p>{email}</p>
 		</div>
 	);
 }
@@ -33,9 +32,10 @@ export function CardDeail(item) {
 	return (
 		<Card {...item} className="detail-container">
 			<img src={close} alt="Close" className="close" />
-			<p>
-				{item.company.name} {item.company.catchPhrase}
-			</p>
+			<p>{item.username}</p>
+			<h3>
+				{item.company.name} / {item.company.catchPhrase}
+			</h3>
 		</Card>
 	);
 }
