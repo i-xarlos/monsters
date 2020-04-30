@@ -25,7 +25,7 @@ class App extends Component {
 		this.setState(
 			(prevState) => {
 				if (prevState.current !== item) return { current: item };
-				else return { current: null };
+				else return { current: null, searchField: '' };
 			},
 			//	() => console.log(this.state.current),
 		);
