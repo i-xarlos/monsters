@@ -9,7 +9,29 @@
     backface-visibility: hidden;
     transform: translateZ(0);
     transition: transform 0.25s ease-out;
+    position: relative;
 
+}
+
+.card-container .image {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.card-container .close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 2rem;
+    height: 2rem;
+}
+
+.card-container.detail-container {
+    width: 30vw;
+   margin: 0 auto;
+   background-color: orange;
+
+   margin-top: 3rem;
 }
 
 .card-container h3 {
@@ -22,4 +44,12 @@
 
 .card-container:hover {
     transform: scale(1.05);
+}
+
+
+@media only screen and (max-width:620px){
+
+.card-container.detail-container {
+    width: 70vw;
+}
 }

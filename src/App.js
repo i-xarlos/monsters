@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 import { CardList } from './components/card-list/card-list.component';
+import { CardDeail } from './components/card/card.component';
 import SearchBox from './components/search-box/search-box.component';
 
 class App extends Component {
 	state = {
 		users: [],
 		searchField: '',
+		current: null,
 	};
 
 	componentDidMount() {
@@ -19,11 +21,22 @@ class App extends Component {
 		this.setState({ searchField: e });
 	};
 
-	render() {
-		const { users, searchField } = this.state;
-		let search = users.filter((item) =>
-			item.name.toLowerCase().includes(searchField),
+	handleClick = (item) => {
+		this.setState(
+			(prevState) => {
+				if (prevState.current !== item) return { current: item };
+				else return { current: null };
+			},
+			//	() => console.log(this.state.current),
 		);
+	};
+
+	render() {
+		const { users, searchField, current } = this.state;
+		let search = users.filter((item) => {
+			item.onClick = () => this.handleClick(item);
+			return item.name.toLowerCase().includes(searchField.toLowerCase());
+		});
 
 		let result;
 
@@ -38,11 +51,17 @@ class App extends Component {
 				);
 		}
 
+		console.log(current);
+
 		return (
 			<div className="App">
 				<h1>Monsters</h1>
-				<SearchBox onChange={this.handleInputChange} />
-				<div className="App-content">{result}</div>
+				{!current && <SearchBox onChange={this.handleInputChange} />}
+				{!!current ? (
+					<CardDeail {...current} />
+				) : (
+					<div className="App-content">{result}</div>
+				)}
 			</div>
 		);
 	}

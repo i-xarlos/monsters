@@ -1,6 +1,6 @@
 import React from 'react';
 import './card-list.style.css';
-import Card from '../card/card.component';
+import { Card } from '../card/card.component';
 
 export function CardList({ search }) {
 	return (
